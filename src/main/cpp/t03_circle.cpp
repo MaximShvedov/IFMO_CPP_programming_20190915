@@ -37,9 +37,30 @@
 
 using namespace std;
 
-//function IsPointInCircle
+float distance(float a, float b, float c, float d); //function distance
+bool proverka(float a, float b); //функция проверки
+bool IsPointInCircle(float a, float b, float c, float d, float e); //function IsPointInCircle
 
 int t03_circle() {
 
+    float x, y, xc, yc, r;
+
+    cin >> x >> y >> xc >> yc >> r;
+    if (IsPointInCircle(x, y, xc, yc, r) == 0)
+        cout << "NO";
+    else cout << "YES";
+
     return 0;
+}
+
+float distance(float a, float b, float c, float d) {
+      return sqrt(abs(pow(a - c, 2) + pow(b - d, 2)));
+}
+bool proverka(float a, float b) {
+     if (a > b)
+        return false;
+     else return true;
+}
+bool IsPointInCircle(float a, float b, float c, float d, float e) {
+     return proverka(distance(a, b, c, d), e);
 }
