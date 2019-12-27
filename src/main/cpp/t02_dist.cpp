@@ -34,6 +34,6 @@ int t02_dist() {
 }
 
 float distance(float a, float b, float c, float d){
-    return sqrt(abs(pow(a - c, 2) + pow(b - d, 2)));
+      return sqrt(abs(pow(a - c, 2) + pow(b - d, 2)));
 }
 
